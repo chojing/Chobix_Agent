@@ -32,7 +32,7 @@ Ollama의 **Command-R (35B)** 모델을 활용하여, 실시간 날씨 데이터
 ├── tools/                  # 기능별 서브 에이전트 모음
 │   └── weather.py          # 실시간 날씨 데이터 수집 에이전트
 ├── inference/              # 추론 엔진
-│   ├── ollama_inference.py # Ollama API 통신 및 모델 핸들링
+│   └── ollama_inference.py # Ollama API 통신 및 모델 핸들링
 ├── prompt/                 # 프롬프트
 │   ├── main_prompts.py     # 메인 시스템 프롬프트
 │   └── weather_prompt.py   # 날씨 데이터 프롬프트
