@@ -27,15 +27,23 @@ Ollama의 **Command-R (35B)** 모델을 활용하여, 실시간 날씨 데이터
 프로젝트는 유지보수와 확장성을 위해 **객체지향(OOP) 구조**로 설계되었습니다.
 
 ```text
-project/
-├── main.py                # 에이전트 실행 및 전체 흐름 제어 (Main Entry)
-├── inference/             # Ollama 모델 연동 및 추론 로직
-├── prompt/                # 시스템 프롬프트 및 페르소나 관리
-└── tools/                 # 외부 도구(Weather API, Geocoding) 연동
+├── main.py                 # 에이전트 실행 및 UI 루프 (Main Loop)
+├── logger_config.py        # 전역 Static Logger 설정 (Logging System)
+├── tools/                  # 기능별 서브 에이전트 모음
+│   └── weather.py          # 실시간 날씨 데이터 수집 에이전트
+├── inference/              # 추론 엔진
+│   ├── ollama_inference.py # Ollama API 통신 및 모델 핸들링
+├── prompt/                 # 프롬프트
+│   ├── main_prompts.py     # 메인 시스템 프롬프트
+│   └── weather_prompt.py   # 날씨 데이터 프롬프트
+├── util/                   # 시스템 로그 저장 폴더
+│   └── logger.py           # 추론 과정 및 에러 기록
+├── requirements.txt        # 설치 필요 라이브러리 목록
+└── README.md               # 프로젝트 사용 설명서
 ```
-
+---
 ## 🖥️ 4. 사용 방법 (Usage)
-터미널 실행 후 >>> 프롬프트에 질문을 입력하세요.
+터미널 실행 후 [질의]: 프롬프트에 질문을 입력하세요.
 
 일반 대화: "너의 이름은 뭐야?" / "오늘 기분 어때?"
 

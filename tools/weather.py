@@ -1,7 +1,7 @@
 import requests
 import re
 from inference.ollama_inference import OllamaInference
-from prompt.weather_prompty import WeatherPrompt
+from prompt.weather_prompt import WeatherPrompt
 import json
 from util.logger import ChobigLogger
 
