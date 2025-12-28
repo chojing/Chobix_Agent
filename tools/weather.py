@@ -28,7 +28,7 @@ class WeatherAgent:
         return weather_data
 
     def get_full_weather_api(self, lat, lon, city_name):
-        print("📡 글로벌 기상 서버(Open-Meteo)에서 풀옵션 데이터 추출 중...")
+        print("글로벌 기상 서버(Open-Meteo)에서 풀옵션 데이터 추출 중...")
 
         # 서울 좌표 + 필요한 옵션들 (최고/최저 기온, 강수 확률, 강수량 등)
         # daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max 옵션 추가
@@ -59,7 +59,7 @@ class WeatherAgent:
             is_raining = "있음" if rain_prob > 20 or rain_sum > 0 else "없음"
 
             weather_fact = (
-                f"📍 [{city_name} 실시간 기상 리포트]\n"
+                f"[{city_name} 실시간 기상 리포트]\n"
                 f"- 현재 기온: {curr_temp}°C\n"
                 f"- 오늘 최고 기온: {max_temp}°C\n"
                 f"- 오늘 최저 기온: {min_temp}°C\n"

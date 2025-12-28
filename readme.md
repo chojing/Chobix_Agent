@@ -29,6 +29,8 @@ Ollama의 **Command-R (35B)** 모델을 활용하여, 실시간 날씨 데이터
 ```text
 ├── main.py                 # 에이전트 실행 및 UI 루프 (Main Loop)
 ├── logger_config.py        # 전역 Static Logger 설정 (Logging System)
+├── mcp/                    # mcp 서버 모음
+│   └── mpc_server.py       # weather tool 실행 코드
 ├── tools/                  # 기능별 서브 에이전트 모음
 │   └── weather.py          # 실시간 날씨 데이터 수집 에이전트
 ├── inference/              # 추론 엔진

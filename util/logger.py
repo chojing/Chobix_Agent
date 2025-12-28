@@ -17,7 +17,7 @@ class ChobigLogger:
             formatter = logging.Formatter('%(asctime)s [%(levelname)s] %(message)s')
 
             # 1. 파일 핸들러 (로그를 파일에 저장)
-            file_handler = logging.FileHandler("agent_process.log", encoding='utf-8')
+            file_handler = logging.FileHandler("logs/agent_process.log", encoding='utf-8')
             file_handler.setFormatter(formatter)
 
             # 2. 콘솔 핸들러 (화면에도 찍고 싶을 때)
